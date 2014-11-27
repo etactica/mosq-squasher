@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+# Very very very quick demo of how to recover the compressed payloads again.
+# TODO - at least take the same command line arguments as mosq-squasher
+# See LICENSE.txt
 import zlib
 import paho.mqtt.client as mqtt
 
