@@ -1,4 +1,3 @@
 *.o
 mosq-squasher
 nbproject/
-version.h

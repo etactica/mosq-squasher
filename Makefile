@@ -22,17 +22,10 @@ TEST_EXECUTABLES=$(TEST_SOURCES:.c=.test)
 TEST_LDFLAGS+=-Wl,--whole-archive -lcheck -Wl,--no-whole-archive
 
 all: $(SOURCES) $(EXECUTABLE)
-
-VER:=$(shell ../../../guess-rev.sh)
-	
-all: version.h $(EXECUTABLE)
 	@echo "rebuilding...."
 
 $(EXECUTABLE): $(MAIN_OBJECT) $(OBJECTS)
 	$(CC) $^ $(LDFLAGS) -o $@
-
-version.h: version.h.in
-	sed -e "s/%WCREV%/$(VER)/g" $< > $@
 
 %o: %c
 	$(CC) -c $(CFLAGS) $< -o $@
@@ -52,6 +45,5 @@ test:	tests
 clean:
 	rm -rf $(EXECUTABLE) $(MAIN_OBJECT) $(OBJECTS)
 	rm -rf $(TEST_OBJECTS) $(TEST_EXECUTABLES) $(TEST_LOGS)
-	rm -rf version.h
 
-.PHONY: all clean version.h tests compiletests
+.PHONY: all clean tests compiletests

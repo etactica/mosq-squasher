@@ -20,7 +20,6 @@
 #include "app.h"
 #include "mosq-manage.h"
 #include "uglylogging.h"
-#include "version.h"
 
 #define APP_NAME "mosq-squasher"
 
@@ -248,7 +247,6 @@ int main(int argc, char** argv) {
 		event_get_version(),
 		event_base_get_method(state.base));
 
-	ILOG("Running application version %s\n", VERSION_VCS_REVISION);
 	state.msg_handler = msg_zipper;
 	if (!mosq_setup(&state)) {
 		app_cleanup(&state);
