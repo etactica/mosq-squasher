@@ -3,6 +3,7 @@
  * Karl Palsson <karlp@remake.is> November 2014
  *
  * Take topic pairs and receive on one, publish compressed on the other
+ * See LICENSE.txt
  */
 #include <assert.h>
 #include <errno.h>

@@ -3,6 +3,7 @@
  * rest of our code pretty enough.
  * 
  * Karl Palsson <karlp@remake.is>, ReMake Electric ehf. 2011
+ * See LICENSE.txt
  */
 
 #include <stdbool.h>

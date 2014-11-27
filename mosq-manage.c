@@ -2,6 +2,7 @@
  * Karl Palsson <karlp@remake.is> November 2014
  * handle the mosquitto event loop with libevent2
  * and _nothing_ else.  Subscribing and message handler are someone else's job!
+ * See LICENSE.txt
  */
 
 #include <errno.h>
